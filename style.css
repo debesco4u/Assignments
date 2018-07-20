@@ -1,0 +1,200 @@
+/*********** CSS Style********/
+*{
+	box-sizing: border-box;
+}
+
+
+#container {
+		background-color: yellow;
+		width: 100%;
+}
+h1 {
+	text-align: center;
+	font-family: cursive,sans-serif;
+}
+
+
+#col,#col2,#col3 {
+	
+	float: left;
+	margin-right:10px;
+
+}
+
+#col {
+	width: 300px;
+	height: 180px;
+	
+}
+#col2 {
+	width: 300px;
+	height: 180px;
+	
+}
+#col3 {
+	width: 300px;
+	height: 180px;
+	
+}
+
+#row1 {
+	background-color: violet;
+	width: 100px;
+	height:30px;
+	float: right;
+	border: 2px solid black;
+	text-align: center;
+	font-family: cursive;
+	font-weight: bold;	
+}
+
+#row2 {
+	background-color: lightgray;
+	width: 300px;
+	height:180px;
+	padding:40px 15px 0px 15px;
+	border: 2px solid black;
+}
+#row21 {
+	background-color:tomato;
+	width: 100px;
+	height:30px;
+	float: right;
+	border: 2px solid black;
+	text-align: center;
+	font-family: cursive;
+	font-weight: bold;
+	color:white;
+
+}
+#row22 {
+	background-color: lightgray;
+	width: 300px;
+	height:180px;
+	padding:40px 15px 0px 15px;
+	border: 2px solid black;
+
+}
+#row31 {
+	background-color: orange;
+	width: 100px;
+	height:30px;
+	float: right;
+	border: 2px solid black;
+	text-align: center;
+	font-family: cursive;
+	font-weight: bold;
+}
+#row32 {
+	background-color: lightgray;
+	width: 300px;
+	height:180px;
+	padding:40px 15px 0px 15px;
+	border: 2px solid black;
+
+}
+
+
+/******** Large Device Media Query********************/
+
+@media(max-width: 500px){
+	#col {color: blue;
+		width: 80%;
+		
+	}
+	# {
+		width:20%;
+	}
+	
+}
+
+
+
+*{
+	box-sizing: border-box;
+	margin:0;
+	padding: 0;
+}
+
+h1 {
+	margin-top: 30px;
+	margin-bottom: 20px;
+	text-align: center;
+	font-family: cursive,sans-serif;
+}
+h2 {
+	width: 40%;
+	float: right;
+	border: 1px solid black;
+	text-align: center;
+	font-family: Comic Sans MS;
+}
+p {
+	padding: 40px 20px 20px 20px;
+	background-color: lightgray;
+	font-family: cursive,sans-serif;
+	border:1px solid black;
+}
+
+#chicken {
+		background-color: violet;
+}
+#beef {
+		background-color: tomato;
+		color: white;
+}
+#sushi {
+		background-color: orange;
+}
+
+.container {
+		
+		width: 100%;
+		position: relative;
+}
+
+
+/******** Large Device Media Query********************/
+@media(min-width: 992px){
+	
+	.col1, .col2, .col3 {
+		padding: 10px;
+		float: left;
+	}
+	.col1 {
+		width:33.33%;
+	}
+	.col2 {
+		width:33.33%;
+	}
+	.col3 {
+		width:33.33%;
+	}
+}
+/******** Meduim Device Media Query********************/
+@media(min-width: 768px) and (max-width: 991px){
+	
+	.col1, .col2, .col3 {
+		padding: 10px;
+		float: left;
+	}
+	.col1 {
+		width:50%;
+	}
+	.col2 {
+		width:50%;
+	}
+	.col3 {
+		width:100%;
+	}
+}
+/******** Small Device Media Query********************/
+@media(max-width: 767px){	
+.col1, .col2, .col3 {
+		padding: 10px;
+		float: left;
+		width: 100%;
+	}
+}
+
+
