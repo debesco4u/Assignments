@@ -126,3 +126,18 @@ Then open `http://localhost:8000`.
 - `POST /api/admin/docs` — create/update document
 - `GET /api/admin/logs` — view recent query logs
 - `GET /api/preview-link` — returns the current preview URL
+
+
+## Repository Migration
+
+This project is now configured to use the new remote repository:
+
+- `https://github.com/debesco4u/remoterep.git`
+
+To publish the project files to the new repository from a network-enabled environment:
+
+```bash
+git remote remove origin 2>/dev/null || true
+git remote add origin https://github.com/debesco4u/remoterep.git
+git push -u origin work:main
+```
