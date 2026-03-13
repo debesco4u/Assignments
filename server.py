@@ -156,6 +156,10 @@ class AppHandler(BaseHTTPRequestHandler):
 
     def do_GET(self):
         parsed = urlparse(self.path)
+        if parsed.path == "/api/preview-link":
+            host = self.headers.get("Host", "localhost:8000")
+            proto = "https" if self.headers.get("X-Forwarded-Proto") == "https" else "http"
+            return json_response(self, 200, {"preview_url": f"{proto}://{host}/"})
         if parsed.path.startswith("/api/admin/docs"):
             data = load_data()
             return json_response(self, 200, {"documents": data["documents"]})

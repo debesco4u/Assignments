@@ -125,3 +125,4 @@ Then open `http://localhost:8000`.
 - `GET /api/admin/docs` — list indexed documents
 - `POST /api/admin/docs` — create/update document
 - `GET /api/admin/logs` — view recent query logs
+- `GET /api/preview-link` — returns the current preview URL

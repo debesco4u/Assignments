@@ -2,6 +2,15 @@ const q = (sel) => document.querySelector(sel);
 const tabs = document.querySelectorAll('.tab');
 const panels = document.querySelectorAll('.tab-panel');
 
+async function loadPreviewLink() {
+  const res = await fetch('/api/preview-link');
+  const data = await res.json();
+  const link = q('#previewLink');
+  link.href = data.preview_url;
+  link.textContent = data.preview_url;
+}
+
+
 for (const t of tabs) {
   t.addEventListener('click', () => {
     tabs.forEach(x => x.classList.remove('active'));
@@ -101,3 +110,5 @@ q('#docForm').addEventListener('submit', async (e) => {
 });
 
 addChat('bot', 'Welcome! Ask about pricing, onboarding, policy, or research updates.');
+
+loadPreviewLink();

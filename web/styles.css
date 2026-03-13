@@ -87,3 +87,6 @@ button { background: var(--primary); color: #fff; cursor: pointer; }
   .admin-grid { grid-template-columns: 1fr; }
   .chat-input-row { grid-template-columns: 1fr; }
 }
+
+.preview { margin: .45rem 0 0; font-size: .92rem; }
+.preview a { color: #bfdbfe; font-weight: 600; }
