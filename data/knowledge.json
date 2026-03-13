@@ -1,0 +1,59 @@
+{
+  "documents": [
+    {
+      "id": "doc-001",
+      "title": "Pricing Model 2025",
+      "department": "Sales",
+      "access": [
+        "employee",
+        "management"
+      ],
+      "updated_at": "2026-01-05",
+      "content": "Our pricing model includes Starter, Growth, and Enterprise tiers with annual discount options."
+    },
+    {
+      "id": "doc-002",
+      "title": "Client Onboarding SOP",
+      "department": "Operations",
+      "access": [
+        "employee"
+      ],
+      "updated_at": "2026-02-16",
+      "content": "Onboarding includes kickoff, stakeholder mapping, implementation planning, and 30-day review."
+    },
+    {
+      "id": "doc-003",
+      "title": "HR Vacation Policy",
+      "department": "HR",
+      "access": [
+        "hr",
+        "employee"
+      ],
+      "updated_at": "2026-01-22",
+      "content": "Employees receive 20 PTO days annually, plus local public holidays, with manager approval workflow."
+    },
+    {
+      "id": "doc-004",
+      "title": "Quarterly Research Brief",
+      "department": "Research",
+      "access": [
+        "employee",
+        "management"
+      ],
+      "updated_at": "2026-03-01",
+      "content": "Latest research highlights growth in AI-assisted workflows and strong demand in regulated industries."
+    }
+  ],
+  "logs": [
+    {
+      "timestamp": "2026-03-13T14:17:27.189323Z",
+      "role": "employee",
+      "query": "What is our pricing model?",
+      "citations": [
+        "doc-001",
+        "doc-004"
+      ],
+      "confidence": 0.8
+    }
+  ]
+}

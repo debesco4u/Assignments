@@ -103,3 +103,41 @@ In order to complete this assignment, you must do the following:
 ### Grading
 
 This assignment will be graded via peer assessment.
+
+## AI Internal Knowledge Assistant Web App
+
+This repository now includes a runnable web application with:
+- Employee chat assistant UI
+- Admin backend UI for managing indexed documents
+- Python HTTP backend with API endpoints
+
+### Run locally
+
+```bash
+python3 server.py
+```
+
+Then open `http://localhost:8000`.
+
+### API endpoints
+
+- `POST /api/chat` — ask a question with role context
+- `GET /api/admin/docs` — list indexed documents
+- `POST /api/admin/docs` — create/update document
+- `GET /api/admin/logs` — view recent query logs
+- `GET /api/preview-link` — returns the current preview URL
+
+
+## Repository Migration
+
+This project is now configured to use the new remote repository:
+
+- `https://github.com/debesco4u/remoterep.git`
+
+To publish the project files to the new repository from a network-enabled environment:
+
+```bash
+git remote remove origin 2>/dev/null || true
+git remote add origin https://github.com/debesco4u/remoterep.git
+git push -u origin work:main
+```
