@@ -1,0 +1,89 @@
+:root {
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --text: #1e293b;
+  --muted: #64748b;
+  --primary: #2563eb;
+  --border: #dbe4f0;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+header {
+  background: linear-gradient(120deg, #1d4ed8, #0f766e);
+  color: #fff;
+  padding: 1.5rem;
+}
+header h1 { margin: 0; }
+header p { margin: .4rem 0 0; opacity: .95; }
+main { padding: 1rem; max-width: 1100px; margin: 0 auto; }
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, .05);
+}
+.tabs { display: flex; gap: .5rem; margin-bottom: 1rem; }
+.tab {
+  padding: .6rem .9rem;
+  border: 1px solid var(--border);
+  background: #fff;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.tab.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+.controls { margin-bottom: .8rem; }
+select, input, textarea, button {
+  width: 100%;
+  padding: .65rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font: inherit;
+}
+.chat-log {
+  min-height: 270px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: .75rem;
+  background: #f8fafc;
+  overflow: auto;
+}
+.msg {
+  margin-bottom: .7rem;
+  padding: .6rem;
+  border-radius: 8px;
+}
+.msg.user { background: #dbeafe; }
+.msg.bot { background: #e2e8f0; }
+.small { color: var(--muted); font-size: .85rem; }
+.chat-input-row { display: grid; grid-template-columns: 1fr 120px; gap: .5rem; margin-top: .7rem; }
+button { background: var(--primary); color: #fff; cursor: pointer; }
+.admin-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.panel {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: .8rem;
+  background: #fff;
+}
+.panel h3 { margin-top: 0; }
+.panel.full { grid-column: 1 / -1; }
+.item {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: .6rem;
+  margin-bottom: .5rem;
+}
+.inline-btn { width: auto; padding: .4rem .6rem; margin-top: .4rem; }
+
+@media (max-width: 900px) {
+  .admin-grid { grid-template-columns: 1fr; }
+  .chat-input-row { grid-template-columns: 1fr; }
+}

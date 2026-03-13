@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Internal Knowledge Assistant</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>AI Internal Knowledge Assistant</h1>
+    <p>Secure, grounded answers from internal documentation.</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <div class="tabs">
+        <button class="tab active" data-tab="assistant">Employee Assistant</button>
+        <button class="tab" data-tab="admin">Admin Backend</button>
+      </div>
+
+      <div id="assistant" class="tab-panel active">
+        <div class="controls">
+          <label>Role
+            <select id="role">
+              <option value="employee">Employee</option>
+              <option value="hr">HR</option>
+              <option value="management">Management</option>
+            </select>
+          </label>
+        </div>
+
+        <div id="chatLog" class="chat-log"></div>
+        <div class="chat-input-row">
+          <input id="query" type="text" placeholder="Ask: What is our pricing model?" />
+          <button id="askBtn">Ask</button>
+        </div>
+      </div>
+
+      <div id="admin" class="tab-panel">
+        <div class="admin-grid">
+          <form id="docForm" class="panel">
+            <h3>Add / Update Document</h3>
+            <input type="hidden" id="docId" />
+            <label>Title <input id="docTitle" required /></label>
+            <label>Department <input id="docDept" required /></label>
+            <label>Access (comma-separated roles)
+              <input id="docAccess" placeholder="employee,management" required />
+            </label>
+            <label>Content
+              <textarea id="docContent" rows="5" required></textarea>
+            </label>
+            <button type="submit">Save Document</button>
+          </form>
+
+          <div class="panel">
+            <h3>Document Index</h3>
+            <div id="docsList"></div>
+          </div>
+
+          <div class="panel full">
+            <h3>Query Logs</h3>
+            <div id="logsList"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
